@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: rgb(240, 240, 240);
+    --heading: rgb(24, 24, 66);
+    --gradient: linear-gradient(0deg, rgb(53, 58, 99) 0%, rgb(86, 130, 160) 100%);
+    --gradient-btn: linear-gradient(to right, crimson,rgb(220, 83, 110));
+    --helper: #8490ff;
+    --black: #000;
+    --white: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body::before {
+    background: url('./images/body-img.jpg') no-repeat center center/cover;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 6rem;
+    font-family: 'Saira';
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-family: 'Saira';
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: 'Poppins';
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: 'Poppins';
+    letter-spacing: 2px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+ 
+li {
+    list-style: none;
+}
+
+.common-heading {
+    font-size: 3.8rem;
+    font-family: 'Saira';
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    position: relative;
+    color: var(--black);
+    margin-bottom: 5rem;
+}
+.common-heading::before {
+    content: '';
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--helper);
+    border-radius: 50%;
+}
+.common-heading::after
+{
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 1.3rem;
+    min-width: 30rem;
+    height: 0.2rem;
+    background: var(--helper);
+}
+.section {
+    padding: 9rem 0;
+}
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+.grid {
+    display: grid;
+    gap: 9rem;
+}
+.grid-one-columns {
+    grid-template-columns: repeat(1, 1fr);
+}
+.grid-two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-three-columns {
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-four-columns {
+    grid-template-columns: repeat(4, 1fr);
+}
+.btn
+{
+    background: var(--gradient-btn);
+    padding: 1.6rem 3.2rem;
+    border: 0;
+    outline: 0;
+    color: var(--para-tint);
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Ubuntu';
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    cursor: pointer;
+}
+.btn:hover , .btn:active {
+    box-shadow: var(--shadow3);
+}
+
+/* Hero Section */
+
+.section-hero {
+    transition: all 0.4s linear;
+}
+.meme-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+.meme-btn {
+    color: var(--white);
+    letter-spacing: 2px;
+}
+.meme-title {
+    text-align: center;
+}
+.meme-container img {
+    border-radius: 10px;
+    width: 50%;
+}
+.meme-para {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/* Responsive Design */
+
+/* Media Queries */
+
+/* 1500px */
+
+@media (max-width: 94em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* 500px */
+
+@media(max-width: 32em) {
+    html {
+        font-size: 50%;
+    }
+    .container {
+        max-width: 40rem;
+    }
+    .meme-container {
+        gap: 4rem;
+    }
+    .meme-container img {
+        width: 100%;
+    }
+    .meme-para {
+        font-size: 2.2rem;
+    }
+}
+
+/* 400px */
+
+@media (max-width: 25em) {
+    html {
+        font-size: 48%;
+    }
+    .container {
+        max-width: 35rem;
+    }
+    .meme-container img {
+        width: 110%;
+    }
+}
+
+/* 320px */
+
+@media (max-width: 20em) {
+    html {
+        font-size: 45%;
+    }
+    .container {
+        max-width: 30rem;
+    }
+    .meme-container img {
+        width: 100%;
+    }
+}
